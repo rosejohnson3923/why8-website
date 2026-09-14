@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHY8 Foundation</title>
+    <meta name="description" content="WHY8 Foundation — why8.org. Contact: info@why8.org">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="WHY8 Foundation">
+    <meta property="og:description" content="WHY8 Foundation — why8.org">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://why8.org">
+    <meta property="og:image" content="https://why8.org/assets/images/why8-avatar-1024-black.png">
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/images/why8-avatar-1024-black.png" type="image/png" sizes="32x32">
+    <link rel="shortcut icon" href="assets/images/why8-avatar-1024-black.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/why8-avatar-1024-black.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared design tokens (@esposure/brand-tokens) + the WHY8 overlay (black & white,
+         purple accent) — loaded before the site styles, which are the esposure4all mould. -->
+    <link rel="stylesheet" href="assets/css/brand-tokens.css">
+    <link rel="stylesheet" href="assets/css/why8.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Holding page: the mould's hero, centred on the lockup. No stats, no badges, no claims —
+           the foundation's mission, programs and status text arrive with the entity and the letter. */
+        .holding { min-height: calc(100vh - 80px); display: flex; align-items: center; }
+        .holding .hero-content { text-align: center; max-width: 820px; margin: 0 auto; }
+        .holding .lockup { width: min(420px, 70vw); height: auto; margin: 0 auto 2rem; display: block; }
+        .holding .hero-subtitle { max-width: 640px; margin: 0 auto 2rem; }
+        .holding .hero-cta { justify-content: center; }
+        .footer .tax-info { display: none; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#hero">
+                    <img src="assets/images/why8-lockup-white.svg" alt="WHY8 Foundation" class="logo-white">
+                    <img src="assets/images/why8-lockup-black.svg" alt="WHY8 Foundation" class="logo-black">
+                </a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="mailto:info@why8.org" class="btn btn-primary">Contact us</a>
+            </div>
+
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Holding page -->
+    <section id="hero" class="hero holding">
+        <div class="container">
+            <div class="hero-content">
+                <img src="assets/images/why8-lockup-black.svg" alt="WHY8 Foundation" class="lockup">
+                <h1 class="hero-title">WHY8 Foundation</h1>
+                <p class="hero-subtitle">Our website is on its way. Until then, write to us.</p>
+                <div class="hero-cta" id="contact">
+                    <a href="mailto:info@why8.org" class="btn btn-primary btn-large">info@why8.org</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/why8-lockup-white.svg" alt="WHY8 Foundation" style="height: 60px; width: auto; margin-bottom: 1rem;">
+                    <h3>WHY8 Foundation</h3>
+                    <p>why8.org</p>
+                </div>
+
+                <div class="footer-spacer"></div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@why8.org">info@why8.org</a></li>
+                        <li><a href="mailto:giving@why8.org">giving@why8.org</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WHY8 Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+# Netlify Configuration for why8.org (WHY8 Foundation)
+# Cut from esposure4all-website/netlify.toml (same headers + CSP). Static site, no build.
+# Primary host = https://why8.org. Every other owned domain (founder, 2026-09-14) is a
+# Netlify domain alias that 301s here; mail stays on why8.org only.
+
+[build]
+  publish = "/"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'"
+
+# The Netlify default host → the primary
+[[redirects]]
+  from = "https://why8-website.netlify.app/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+# http → https and www → apex on the primary
+[[redirects]]
+  from = "http://why8.org/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.why8.org/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8.org/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+# The seven redirect-only domains (each added to the Netlify site as a domain alias, apex + www)
+[[redirects]]
+  from = "https://why8.global/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8.global/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://why8foundation.org/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8foundation.org/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://why8foundation.global/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8foundation.global/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://why8foundation.com/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8foundation.com/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://why8foundation.net/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8foundation.net/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://why8foundation.store/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8foundation.store/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://why8foundation.info/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.why8foundation.info/*"
+  to = "https://why8.org/:splat"
+  status = 301
+  force = true

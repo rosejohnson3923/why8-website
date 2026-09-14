@@ -1,0 +1,18 @@
+{
+  "name": "why8-website",
+  "version": "0.1.0",
+  "description": "WHY8 Foundation — why8.org. Static site cut from the esposure4all-website mould; deploys to Netlify from GitHub.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -s .",
+    "dev": "npx serve -s . -l 3004",
+    "build": "echo 'Static site - no build required'",
+    "sync:tokens": "cp ../esposure-brand-tokens/css/brand-tokens.css assets/css/ && cp ../esposure-brand-tokens/css/brands/why8.css assets/css/",
+    "check:claims": "! grep -rniE '501\\(c\\)|tax-deductible|tax deductible|nonprofit|non-profit' index.html privacy-policy.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosejohnson3923/why8-website.git"
+  },
+  "license": "UNLICENSED"
+}
