@@ -8,7 +8,7 @@
     "dev": "npx serve -s . -l 3004",
     "build": "echo 'Static site - no build required'",
     "sync:tokens": "cp ../esposure-brand-tokens/css/brand-tokens.css assets/css/ && cp ../esposure-brand-tokens/css/brands/why8.css assets/css/",
-    "check:claims": "! grep -rniE '501\\(c\\)|tax-deductible|tax deductible|tax-exempt|tax exempt|public charity|application pending|being organized as' index.html privacy-policy.html && grep -q 'formed September 14, 2026 (Texas Secretary of State file number 806794952)' index.html"
+    "check:claims": "! grep -rniE 'is a 501\\(c\\)\\(3\\)|501\\(c\\)\\(3\\) (organization|nonprofit|charity)|tax[- ]deductible|tax[- ]exempt\\b|public charity|being organized as|[0-9]+ FM [0-9]+' index.html privacy-policy.html && grep -q 'formed September 14, 2026 (Texas Secretary of State file number 806794952)' index.html && grep -q 'The application is pending; no determination letter has been issued.' index.html"
   },
   "repository": {
     "type": "git",
