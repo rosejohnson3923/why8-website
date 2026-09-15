@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHY8 Foundation</title>
-    <meta name="description" content="WHY8 Foundation — expanding access to career-connected learning for K-12 students in underserved communities. Contact: info@why8.org">
+    <meta name="description" content="WHY8 Foundation — a Texas nonprofit corporation expanding access to career-connected learning for K-12 students in underserved communities. Contact: info@why8.org">
 
     <!-- Open Graph -->
     <meta property="og:title" content="WHY8 Foundation">
@@ -30,13 +30,15 @@
     <link rel="stylesheet" href="assets/css/why8.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        /* Holding page: the mould's hero, centred on the lockup. No stats, no badges, no claims —
-           the foundation's mission, programs and status text arrive with the entity and the letter. */
-        .holding { min-height: calc(100vh - 80px); display: flex; align-items: center; }
-        .holding .hero-content { text-align: center; max-width: 820px; margin: 0 auto; }
-        .holding .lockup { width: min(420px, 70vw); height: auto; margin: 0 auto 2rem; display: block; }
-        .holding .hero-subtitle { max-width: 640px; margin: 0 auto 2rem; }
-        .holding .hero-cta { justify-content: center; }
+        /* WHY8 v1 (2026-09-15, the entity formed): the mould's hero, purpose, four purpose areas, get involved.
+           Every outward sentence is keyed to a register claim (see the HTML comments); no IRS-status text until the letter. */
+        .hero.why8 { min-height: calc(100vh - 80px); display: flex; align-items: center; }
+        .hero.why8 .hero-content { text-align: center; max-width: 820px; margin: 0 auto; }
+        .hero.why8 .lockup { width: min(420px, 70vw); height: auto; margin: 0 auto 2rem; display: block; }
+        .hero.why8 .hero-subtitle { max-width: 640px; margin: 0 auto 2rem; }
+        .hero.why8 .hero-cta { justify-content: center; }
+        .mission-pillars { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        .entity-line { text-align: center; margin: 2rem auto 0; max-width: 720px; font-size: 0.95rem; opacity: 0.85; }
         .footer .tax-info { display: none; }
     </style>
 </head>
@@ -53,6 +55,8 @@
 
             <div class="nav-menu" id="nav-menu">
                 <a href="#about" class="nav-link">Purpose</a>
+                <a href="#what-we-do" class="nav-link">What we do</a>
+                <a href="#get-involved" class="nav-link">Get involved</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
 
@@ -68,31 +72,97 @@
         </div>
     </nav>
 
-    <!-- Holding page -->
-    <section id="hero" class="hero holding">
+    <!-- Hero -->
+    <section id="hero" class="hero why8">
         <div class="container">
             <div class="hero-content">
                 <img src="assets/images/why8-lockup-black.svg" alt="WHY8 Foundation" class="lockup">
                 <h1 class="hero-title">WHY8 Foundation</h1>
-                <!-- claim: why8.purpose.charter (ops 256) — the one-liner, verbatim -->
+                <!-- claim: why8.purpose.charter — the one-liner, verbatim -->
                 <p class="hero-subtitle">Expanding access to career-connected learning for K-12 students in underserved communities.</p>
-                <div class="hero-cta" id="contact">
-                    <a href="mailto:info@why8.org" class="btn btn-primary btn-large">info@why8.org</a>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary btn-large">Our purpose</a>
+                    <a href="mailto:info@why8.org" class="btn btn-secondary btn-large">info@why8.org</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About — claim: why8.purpose.charter (ops 256), verbatim. Nothing here beyond the purpose clause:
-         no IRS-status citation until the determination letter exists; "being organized as" until the certificate of formation is filed. -->
+    <!-- Our Purpose — claim: why8.purpose.charter (ops 257), the statement verbatim; the entity line is claim
+         why8.entity.texas-nonprofit-corporation (ops 257). No federal tax-status text: that sentence arrives with its letter, as its own claim. -->
     <section id="about" class="mission">
         <div class="container">
             <div class="section-header">
                 <h2>Our Purpose</h2>
+                <p class="section-subtitle">Expanding access to career-connected learning for K-12 students in underserved communities.</p>
             </div>
             <div class="mission-content">
                 <div class="mission-statement">
-                    <p>WHY8 Foundation is being organized as a Texas nonprofit corporation for charitable and educational purposes. Its purpose is to expand access to career-connected learning, career exploration and workforce-readiness education for students in kindergarten through grade 12, with emphasis on students in underserved and economically disadvantaged communities; to develop, provide, sponsor and fund educational programs, curricula, instructional materials and educational technology that connect academic instruction to career and technical education, industry-recognized credentials and postsecondary pathways; to support educators and school districts through professional development, training and instructional resources; and to conduct and publish research on career-connected learning and student outcomes.</p>
+                    <p>WHY8 Foundation is a Texas nonprofit corporation for charitable and educational purposes. Its purpose is to expand access to career-connected learning, career exploration and workforce-readiness education for students in kindergarten through grade 12, with emphasis on students in underserved and economically disadvantaged communities; to develop, provide, sponsor and fund educational programs, curricula, instructional materials and educational technology that connect academic instruction to career and technical education, industry-recognized credentials and postsecondary pathways; to support educators and school districts through professional development, training and instructional resources; and to conduct and publish research on career-connected learning and student outcomes.</p>
+                </div>
+                <p class="entity-line">WHY8 Foundation is a Texas nonprofit corporation, formed September 14, 2026 (Texas Secretary of State file number 806794952).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do — the four purposes (a)–(d) of claim why8.purpose.charter, each in the clause's own words.
+         The headings are labels for the reader; the paragraphs add nothing the clause does not say. -->
+    <section id="what-we-do" class="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>What we do</h2>
+                <p class="section-subtitle">Four purposes, from the foundation's charter</p>
+            </div>
+            <div class="mission-content">
+                <div class="mission-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon">🧭</div>
+                        <h3>Access to career-connected learning</h3>
+                        <p>Expand access to career-connected learning, career exploration and workforce-readiness education for students in kindergarten through grade 12, with emphasis on students in underserved and economically disadvantaged communities.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">📚</div>
+                        <h3>Programs, curricula and technology</h3>
+                        <p>Develop, provide, sponsor and fund educational programs, curricula, instructional materials and educational technology that connect academic instruction to career and technical education, industry-recognized credentials and postsecondary pathways.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">🏫</div>
+                        <h3>Support for educators and districts</h3>
+                        <p>Support educators and school districts through professional development, training and instructional resources.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">🔬</div>
+                        <h3>Research</h3>
+                        <p>Conduct and publish research on career-connected learning and student outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get involved — contact routes only. No donation button, no deductibility sentence, no partner or volunteer
+         program (none exists); the mailboxes are the foundation's Groups (info@ and giving@, both founders receive). -->
+    <section id="get-involved" class="get-involved">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get involved</h2>
+                <p class="section-subtitle">The foundation is newly formed. Here is how to reach us.</p>
+            </div>
+            <div class="involvement-options">
+                <div class="option-card" id="support">
+                    <h3>Support the work</h3>
+                    <p>If you would like to support the foundation's purposes, write to us and we will follow up directly.</p>
+                    <a href="mailto:giving@why8.org" class="btn btn-primary">giving@why8.org</a>
+                </div>
+                <div class="option-card" id="partner">
+                    <h3>Educators and districts</h3>
+                    <p>School districts, educators and organizations that share these purposes can start a conversation with us.</p>
+                    <a href="mailto:info@why8.org" class="btn btn-secondary">info@why8.org</a>
+                </div>
+                <div class="option-card" id="contact">
+                    <h3>Contact</h3>
+                    <p>General enquiries, press and anything else.</p>
+                    <a href="mailto:info@why8.org" class="btn btn-secondary">info@why8.org</a>
                 </div>
             </div>
         </div>
@@ -105,6 +175,8 @@
                 <div class="footer-brand">
                     <img src="assets/images/why8-lockup-white.svg" alt="WHY8 Foundation" style="height: 60px; width: auto; margin-bottom: 1rem;">
                     <h3>WHY8 Foundation</h3>
+                    <!-- claim: why8.entity.texas-nonprofit-corporation (ops 257) -->
+                    <p>A Texas nonprofit corporation, formed September 14, 2026.</p>
                     <p>why8.org</p>
                 </div>
 
