@@ -1,14 +1,14 @@
 {
   "name": "why8-website",
   "version": "0.1.0",
-  "description": "WHY8 Foundation — why8.org. Static site cut from the esposure4all-website mould; deploys to Netlify from GitHub.",
+  "description": "WHY8 Foundation \u2014 why8.org. Static site cut from the esposure4all-website mould; deploys to Netlify from GitHub.",
   "private": true,
   "scripts": {
     "start": "npx serve -s .",
     "dev": "npx serve -s . -l 3004",
     "build": "echo 'Static site - no build required'",
     "sync:tokens": "cp ../esposure-brand-tokens/css/brand-tokens.css assets/css/ && cp ../esposure-brand-tokens/css/brands/why8.css assets/css/",
-    "check:claims": "! grep -rniE 'is a 501\\(c\\)\\(3\\)|501\\(c\\)\\(3\\) (organization|nonprofit|charity)|tax[- ]deductible|tax[- ]exempt\\b|public charity|being organized as|[0-9]+ FM [0-9]+' index.html privacy-policy.html && grep -q 'formed September 14, 2026 (Texas Secretary of State file number 806794952)' index.html && grep -q 'The application is pending; no determination letter has been issued.' index.html"
+    "check:claims": "! grep -rniE 'is a 501\\(c\\)\\(3\\)|501\\(c\\)\\(3\\) (organization|nonprofit|charity)|tax[- ]deductible|tax[- ]exempt\\b|public charity|being organized as|[0-9]+ FM [0-9]+|tiktok\\.com|why8[-_.]foundation' index.html privacy-policy.html && grep -q 'formed September 14, 2026 (Texas Secretary of State file number 806794952)' index.html && grep -q 'The application is pending; no determination letter has been issued.' index.html && [ \"$(grep -c 'why8foundation' index.html)\" -ge 3 ] && grep -qi 'youtube.com/@Why8Foundation' index.html"
   },
   "repository": {
     "type": "git",
