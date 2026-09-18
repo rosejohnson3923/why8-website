@@ -8,7 +8,7 @@
     "dev": "npx serve -s . -l 3004",
     "build": "echo 'Static site - no build required'",
     "sync:tokens": "cp ../esposure-brand-tokens/css/brand-tokens.css assets/css/ && cp ../esposure-brand-tokens/css/brands/why8.css assets/css/",
-    "check:claims": "! grep -rniE 'is a 501\\(c\\)\\(3\\)|501\\(c\\)\\(3\\) (organization|nonprofit|charity)|tax[- ]deductible|tax[- ]exempt\\b|public charity|being organized as|[0-9]+ FM [0-9]+|August 31|Form 1023([^-]|$)|tiktok\\.com|why8[-_.]foundation' index.html privacy-policy.html && grep -q 'formed September 14, 2026 (Texas Secretary of State file number 806794952)' index.html && grep -q 'The application is pending; no determination letter has been issued.' index.html && [ \"$(grep -c 'why8foundation' index.html)\" -ge 3 ] && grep -qi 'youtube.com/@Why8Foundation' index.html && grep -q 'IRS Form 1023-EZ, Section 501(c)(3)) on September 18, 2026' index.html"
+    "check:claims": "! grep -rniE 'is a 501\\(c\\)\\(3\\)|501\\(c\\)\\(3\\) (organization|nonprofit|charity)|tax[- ]deductible|tax[- ]exempt\\b|public charity|being organized as|[0-9]+ FM [0-9]+|August 31|(formed|filed)[^.<]*(January|February|March|April|May|June|July|August|September|October|November|December) [0-9]|Form 1023([^-]|$)|tiktok\\.com|why8[-_.]foundation' index.html privacy-policy.html && grep -q 'is a Texas nonprofit corporation (Texas Secretary of State file number 806794952).' index.html && grep -q '(IRS Form 1023-EZ, Section 501(c)(3)). The application is pending.' index.html && [ \"$(grep -c 'why8foundation' index.html)\" -ge 3 ] && grep -qi 'youtube.com/@Why8Foundation' index.html"
   },
   "repository": {
     "type": "git",
