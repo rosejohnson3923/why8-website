@@ -8,7 +8,7 @@
     "dev": "npx serve -s . -l 3004",
     "build": "echo 'Static site - no build required'",
     "sync:tokens": "cp ../esposure-brand-tokens/css/brand-tokens.css assets/css/ && cp ../esposure-brand-tokens/css/brands/why8.css assets/css/",
-    "check:claims": "! grep -rniE 'tax[- ]deductible|pending|being organized as|[0-9]+ FM [0-9]+|August 31|(formed|filed)[^.<]*(January|February|March|April|May|June|July|August|September|October|November|December) [0-9]|Form 1023|tiktok\\.com|why8[-_.]foundation' index.html privacy-policy.html && grep -q 'is a Texas nonprofit corporation (Texas Secretary of State file number 806794952).' index.html && grep -q 'is recognized by the Internal Revenue Service as exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code, and is a public charity.' index.html && [ \"$(grep -c 'why8foundation' index.html)\" -ge 3 ] && grep -qi 'youtube.com/@Why8Foundation' index.html"
+    "check:claims": "! grep -rniE 'pending|being organized as|[0-9]+ FM [0-9]+|August 31|(formed|filed)[^.<]*(January|February|March|April|May|June|July|August|September|October|November|December) [0-9]|Form 1023|tiktok\\.com|why8[-_.]foundation' index.html privacy-policy.html && grep -q 'is a Texas nonprofit corporation (Texas Secretary of State file number 806794952).' index.html && grep -q 'Contributions to WHY8 Foundation are tax-deductible to the extent allowed by law.' index.html && grep -q 'is recognized by the Internal Revenue Service as exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code, and is a public charity.' index.html && [ \"$(grep -c 'why8foundation' index.html)\" -ge 3 ] && grep -qi 'youtube.com/@Why8Foundation' index.html"
   },
   "repository": {
     "type": "git",
